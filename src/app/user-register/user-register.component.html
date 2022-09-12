@@ -1,0 +1,42 @@
+<div class="container">
+    <form class="my-form" [formGroup]="userData">
+        <h2>New User Resigration</h2>
+        <mat-form-field>
+            <mat-label>Enter First Name</mat-label>
+            <input matInput name="firstName" formControlName="firstName" >
+        </mat-form-field> 
+
+        <mat-form-field>
+            <mat-label>Enter Last Name</mat-label>
+            <input matInput type="text" name="lastName" formControlName="lastName">
+        </mat-form-field> 
+
+        <mat-form-field>
+            <mat-label>Enter Email</mat-label>
+            <input matInput type="email" name="email" formControlName="email">
+        </mat-form-field> 
+        <mat-form-field>
+            <mat-label>Enter Contact No</mat-label>
+            <input matInput type="number" name="contact" formControlName="contact">
+        </mat-form-field> 
+
+        <mat-form-field>
+            <mat-label>Create User Name</mat-label>
+            <input matInput type="text" name="userName" formControlName="userName">
+        </mat-form-field> 
+
+        <mat-form-field>
+            <mat-label>Create Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" name="password" formControlName="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field> 
+    
+        <div mat-dialog-action [align]="'end'">
+            <button mat-raised-button type="submit" color="primary" (click)="onRegister()" >Register</button>
+            <button mat-raised-button  color="warn" (click)="close()">close</button>
+            
+        </div>
+    </form>
+</div>

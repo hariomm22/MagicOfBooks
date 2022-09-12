@@ -1,0 +1,15 @@
+.container{
+    background-color: white;
+    width: 70%;
+}
+.mat-form-field{
+    width: 100%;
+}
+
+.my-form h2{
+    color: blue;
+}
+.mat-raised-button{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

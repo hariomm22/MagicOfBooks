@@ -1,0 +1,23 @@
+<div class="login-form">
+    <form class="my-form" [formGroup]="loginForm">
+        <h1>User Login</h1>
+        <mat-form-field  class="my-fields">
+            <mat-label>Username or Email</mat-label>
+            <input matInput name="username" formControlName="userName">
+        </mat-form-field> <br> <br>
+
+        <mat-form-field class="my-fields">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" name="password" formControlName="password" >
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button [disabled]="logData()" color="primary" type="submit" (click)="onSubmit()">Login</button>
+    <p>If you are not registered <a (click)="openUserDialog()">Click Here</a> to register</p>
+    <p><a (click)="listOfAllBooks()">Click Here</a> to seen all the Books registered on App</p>
+</div>
+<router-outlet>
+
+</router-outlet>

@@ -1,0 +1,23 @@
+.login-form{
+    margin-left:35%;
+    margin-top: 100px;
+    width: 25%;
+}
+.my-fields{
+    width: 100%;
+}
+.login-form h1{
+    
+    color: blue;
+    font-family:'Times New Roman', Times, serif;
+    /* font-size:xx-large; */
+    font-size: 200%;
+}
+
+.mat-raised-button{
+   /* margin-left: 40%; */
+   width: 100%;
+}
+p{
+    margin-top:10px;
+}

@@ -1,0 +1,26 @@
+<div class="container">
+    <form class="my-form" [formGroup]="bookData">
+        <h2>Add Book Details</h2>
+        <mat-form-field>
+            <mat-label>Book Name</mat-label>
+            <input matInput name="name" formControlName="name" >
+        </mat-form-field> <br> <br>
+        <mat-form-field>
+            <mat-label>Book Author Name</mat-label>
+            <input matInput type="text" name="name" formControlName="author">
+        </mat-form-field> <br> <br>
+        <mat-form-field>
+            <mat-label>Book Type</mat-label>
+            <input matInput type="text" name="type" formControlName="type">
+        </mat-form-field> <br> <br>
+        <mat-form-field>
+            <mat-label>Book Price</mat-label>
+            <input matInput type="text" name="price" formControlName="price">
+        </mat-form-field> <br> <br>
+        <div mat-dialog-action [align]="'end'">
+            <button mat-raised-button type="submit" color="primary" (click)="onAdd()">Add</button>
+            <button mat-raised-button  color="warn" (click)="close()">close</button>
+            
+        </div>
+    </form>
+</div>

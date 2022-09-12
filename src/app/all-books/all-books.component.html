@@ -1,0 +1,80 @@
+<div class="container">
+    <h1>List of All Books</h1>
+    <mat-form-field id="filter" appearance="standard">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+    </mat-form-field>
+    
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort>
+    
+       
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <strong> ID </strong> </th>
+          <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+        </ng-container>
+    
+       
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>Book Name</b> </th>
+          <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+        </ng-container>
+    
+        
+        <ng-container matColumnDef="author">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <strong>Author Name</strong> </th>
+          <td mat-cell *matCellDef="let row"> {{row.author}} </td>
+        </ng-container>
+    
+        
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <strong> Book Type</strong> </th>
+          <td mat-cell *matCellDef="let row"> {{row.type}} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <strong>Price</strong> </th>
+          <td mat-cell *matCellDef="let row">${{row.price}} </td>
+        </ng-container>
+  
+  
+        <ng-container matColumnDef="wishlist">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <strong>Add in WishList</strong> </th>
+          <td mat-cell *matCellDef="let row"> 
+            <button (click)="wishListChange(row)" *ngIf="row.wishlist" color="primary" mat-icon-button>
+              <mat-icon>favorite</mat-icon>
+            </button>  
+            <button (click)="wishListChange(row)" *ngIf="!row.wishlist" mat-icon-button>
+              <mat-icon>favorite_border</mat-icon>
+            </button>  
+          </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="completed">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <strong>Mark Completed</strong> </th>
+          <td mat-cell *matCellDef="let row">
+            <button (click)="completedListChange(row)" *ngIf="row.completed" color="primary" mat-icon-button >
+              <mat-icon>check_circle</mat-icon>
+            </button> 
+            <button (click)="completedListChange(row)" *ngIf="!row.completed" mat-icon-button >
+              <mat-icon>check_circle_outline</mat-icon>
+            </button> 
+          </td>
+        </ng-container>
+  
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+        
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[6, 15, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    </div>
+    <button mat-raised-button type="submit" color="primary" (click)="openBookDialog()" >Add a new Book</button>
+    <!-- <button mat-raised-button type="submit" color="primary" (click)="openUserDialog()" >Add a new User</button> -->
+  </div>
+  

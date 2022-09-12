@@ -1,0 +1,141 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "Harry Potter",
+      "author": "J. k. Rowling",
+      "type": "Action and Adventure",
+      "price": 520,
+      "completed": true,
+      "wishlist": false
+    },
+    {
+      "id": 2,
+      "name": "Casa de papel",
+      "author": "Professor Journal",
+      "type": "Hiest",
+      "price": 580,
+      "completed": false,
+      "wishlist": false
+    },
+    {
+      "id": 3,
+      "name": "The Princess Bride",
+      "author": "William Goldman",
+      "type": "Action and Adventure",
+      "price": 450,
+      "completed": false,
+      "wishlist": true
+    },
+    {
+      "id": 4,
+      "name": "Stranger Things",
+      "author": "Duffer Brothers",
+      "type": "Horror",
+      "price": 850,
+      "completed": false,
+      "wishlist": true
+    },
+    {
+      "id": 5,
+      "name": "Shivaji The Grand Rebel",
+      "author": "Dennis Kincaid",
+      "type": "Historical Fiction",
+      "price": 700,
+      "completed": false,
+      "wishlist": false
+    },
+    {
+      "id": 6,
+      "name": "Chosen Spirits",
+      "author": "Samit Basu",
+      "type": "Science Fiction",
+      "price": 550,
+      "completed": false,
+      "wishlist": false
+    },
+    {
+      "id": 7,
+      "name": "Maharana Pratap:The Warrior",
+      "author": "Rima Hooja",
+      "type": "Historical Fiction",
+      "price": 900,
+      "completed": false,
+      "wishlist": false
+    },
+    {
+      "id": 8,
+      "name": "Vikrama Aditya",
+      "author": "Kavi Kalidas",
+      "type": "Historical Fiction",
+      "price": 900,
+      "completed": false,
+      "wishlist": false
+    },
+    {
+      "id": 9,
+      "name": "Samrat Ashok",
+      "author": "Daya Prakash Sinha ",
+      "type": "Historical Fiction",
+      "price": 900,
+      "completed": false,
+      "wishlist": false
+    },
+    {
+      "id": 10,
+      "name": "gurugovind",
+      "author": "Shivaji",
+      "type": "Histroy",
+      "price": "900",
+      "completed": false,
+      "wishlist": false
+    },
+    {
+      "id": 11,
+      "name": "ramayan",
+      "author": "kk",
+      "type": "hgu",
+      "price": "8979",
+      "completed": false,
+      "wishlist": true
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Hariom",
+      "lastName": "Mahajan",
+      "email": "hariommahajan22@gmail.com",
+      "contact": 9755374857,
+      "userName": "hm22",
+      "password": "hm@123"
+    },
+    {
+      "id": 2,
+      "firstName": "Radheshyam",
+      "lastName": "Mahajan",
+      "email": "radhe@gmail.com",
+      "contact": 7863485,
+      "userName": "radhe",
+      "password": "123"
+    },
+    {
+      "id": 3,
+      "firstName": "Govind",
+      "lastName": "",
+      "email": "govind@gmail.com",
+      "contact": 845769747,
+      "userName": "nandu",
+      "password": "123"
+    },
+    {
+      "id": 4,
+      "firstName": "pavan",
+      "lastName": "",
+      "email": "pavan",
+      "contact": "",
+      "userName": "pavan",
+      "password": "123"
+    }
+  ]
+}

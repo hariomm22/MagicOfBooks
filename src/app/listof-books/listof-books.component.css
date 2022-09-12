@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+
+  h1{
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size:xx-large;
+    margin-top: 10px;
+  }
+
+  .mat-icon-button{
+    padding: 10px;
+  }
